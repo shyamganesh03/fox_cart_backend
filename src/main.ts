@@ -16,6 +16,7 @@ async function bootstrap() {
     .setDescription('API for Fox Cart')
     .setVersion('1.0')
     .addTag('auth')
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);
