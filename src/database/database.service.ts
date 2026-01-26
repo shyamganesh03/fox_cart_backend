@@ -13,6 +13,7 @@ export class DatabaseService implements OnModuleDestroy {
     this.pool = new Pool({
       connectionString: connectionString,
       ssl: { rejectUnauthorized: false },
+      family: 4,
     });
   }
 
