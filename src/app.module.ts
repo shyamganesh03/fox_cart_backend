@@ -25,6 +25,6 @@ import { DatabaseModule } from './database/database.module';
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(LoggingMiddleware).forRoutes('*');
-    // consumer.apply(SupabaseAuthMiddleware).exclude('auth/(.*)').forRoutes('*');
+    consumer.apply(SupabaseAuthMiddleware).exclude('auth/(.*)').forRoutes('*');
   }
 }
